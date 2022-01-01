@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+  z-index: 10;
+}
+header .logo {
+  max-width: 120px;
+}
+header .logo img {
+  max-width: 100%;
+}
+header .home__icon i {
+  font-size: 50px;
+  color: #fff;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(Images/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  /* display: flex;
+  justify-content: flex-start;
+  align-items: center; */
+}
+.banner .content {
+  position: absolute;
+  max-width: 550px;
+  top: 30%;
+}
+.banner .content h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner .content h2 span {
+  font-weight: 800;
+}
+.banner .content p {
+  font-weight: 300;
+  font-size: 1.2em;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin: 15px 0;
+}
+.play {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+  margin-top: 15px;
+}
+.play img {
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li {
+  list-style: none;
+}
+.sci li a {
+  text-decoration: none;
+}
+.sci li a img {
+  filter: invert(1);
+  transform: scale(0.6);
+}
+.slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.slide__animate {
+  width: 250px;
+  height: 150px;
+  background: url(Images/joker.png);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate {
+  0%,
+  100% {
+    background-position: top;
+  }
+  45%,
+  55% {
+    background-position: bottom;
+  }
+}
+.slide__time {
+  height: 150px;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slide__time__detail {
+  text-align: center;
+}
+.slide__time__detail h3 {
+  color: #fff;
+  font-size: 40px;
+}
+.slide__time__detail p {
+  font-size: 10px !important;
+}
+
+
+
+@media (max-width: 991px) {
+  header {
+    padding: 20px 50px;
+  }
+  header .logo img {
+    max-width: 80px;
+  }
+
+  header .toggle img {
+    max-width: 40px;
+  }
+  .banner {
+    padding: 100px 50px;
+  }
+  .banner .content h2 {
+    font-size: 2em;
+    letter-spacing: 0.05em;
+  }
+  .banner .content p {
+    font-size: 1em;
+    letter-spacing: 0.05em;
+  }
+  .slide {
+    position: absolute;
+    bottom: initial;
+    left: 0px;
+    width: 250px;
+    height: 150px;
+    margin: 20px 0;
+  }
+  .slide__time{
+    display: none;
+  }
+}
